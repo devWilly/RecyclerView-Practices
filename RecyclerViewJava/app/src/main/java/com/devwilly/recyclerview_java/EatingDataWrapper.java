@@ -2,7 +2,7 @@ package com.devwilly.recyclerview_java;
 
 import com.devwilly.recyclerview_java.wrapper.FoodWrapper;
 import com.devwilly.recyclerview_java.wrapper.FruitWrapper;
-import com.devwilly.recyclerview_java.wrapper.IEatingType;
+import com.devwilly.recyclerview_java.wrapper.IEatingWrapper;
 
 import android.content.Context;
 
@@ -21,8 +21,8 @@ public class EatingDataWrapper {
         this.mContext = context;
     }
 
-    public ArrayList<IEatingType> getFoodItemList() {
-        ArrayList<IEatingType> list = new ArrayList<>();
+    public ArrayList<IEatingWrapper> getFoodItemList() {
+        ArrayList<IEatingWrapper> list = new ArrayList<>();
 
         String riceName = getString(R.string.rice_name);
         String riceDescription = getString(R.string.rice_description);
@@ -58,8 +58,8 @@ public class EatingDataWrapper {
         return list;
     }
 
-    public ArrayList<IEatingType> getFruitItemList() {
-        ArrayList<IEatingType> list = new ArrayList<>();
+    public ArrayList<IEatingWrapper> getFruitItemList() {
+        ArrayList<IEatingWrapper> list = new ArrayList<>();
 
         String appleName = getString(R.string.apple_name);
         String appleDescription = getString(R.string.apple_description);

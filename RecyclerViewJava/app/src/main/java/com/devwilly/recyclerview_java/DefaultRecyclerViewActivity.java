@@ -1,6 +1,6 @@
 package com.devwilly.recyclerview_java;
 
-import com.devwilly.recyclerview_java.wrapper.IEatingType;
+import com.devwilly.recyclerview_java.wrapper.IEatingWrapper;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,7 +23,7 @@ public class DefaultRecyclerViewActivity extends AppCompatActivity {
         setContentView(R.layout.default_recycler_view_activity);
 
         EatingDataWrapper dataWrapper = new EatingDataWrapper(this);
-        ArrayList<IEatingType> list = new ArrayList<>();
+        ArrayList<IEatingWrapper> list = new ArrayList<>();
         list.addAll(dataWrapper.getFoodItemList());
         list.addAll(dataWrapper.getFruitItemList());
 

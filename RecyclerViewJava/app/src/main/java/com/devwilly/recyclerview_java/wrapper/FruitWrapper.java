@@ -4,7 +4,7 @@ package com.devwilly.recyclerview_java.wrapper;
  * Created by Willy on 15/01/2018.
  */
 
-public class FruitWrapper implements IEatingType {
+public class FruitWrapper implements IEatingWrapper {
 
     private String mName;
     private String mPrice;
@@ -33,6 +33,6 @@ public class FruitWrapper implements IEatingType {
 
     @Override
     public int getItemType() {
-        return IEatingType.FRUIT;
+        return IEatingWrapper.FRUIT;
     }
 }

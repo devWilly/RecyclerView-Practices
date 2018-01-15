@@ -4,7 +4,7 @@ import com.devwilly.recyclerview_java.viewholders.BaseViewHolder;
 import com.devwilly.recyclerview_java.viewholders.FoodViewHolder;
 import com.devwilly.recyclerview_java.viewholders.FruitViewHolder;
 import com.devwilly.recyclerview_java.viewholders.UnknownViewHolder;
-import com.devwilly.recyclerview_java.wrapper.IEatingType;
+import com.devwilly.recyclerview_java.wrapper.IEatingWrapper;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,9 +20,9 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
-    private ArrayList<IEatingType> mItemList = new ArrayList<>();
+    private ArrayList<IEatingWrapper> mItemList = new ArrayList<>();
 
-    public RecyclerViewAdapter(ArrayList<IEatingType> itemList) {
+    public RecyclerViewAdapter(ArrayList<IEatingWrapper> itemList) {
         this.mItemList = itemList;
     }
 
@@ -32,10 +32,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
         switch (viewType) {
-            case IEatingType.FRUIT:
+            case IEatingWrapper.FRUIT:
                 view = inflater.inflate(R.layout.fruit_item_view, parent, false);
                 return new FruitViewHolder(view);
-            case IEatingType.FOOD:
+            case IEatingWrapper.FOOD:
                 view = inflater.inflate(R.layout.food_item_view, parent, false);
                 return new FoodViewHolder(view);
             default:

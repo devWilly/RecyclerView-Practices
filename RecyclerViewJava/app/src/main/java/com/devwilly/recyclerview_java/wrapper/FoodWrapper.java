@@ -4,7 +4,7 @@ package com.devwilly.recyclerview_java.wrapper;
  * Created by Willy on 15/01/2018.
  */
 
-public class FoodWrapper implements IEatingType {
+public class FoodWrapper implements IEatingWrapper {
 
     enum FoodCookingMethod {
         SAUTE, STEW, BROIL, BAKE, FRY, DEEPFRY
@@ -42,6 +42,6 @@ public class FoodWrapper implements IEatingType {
 
     @Override
     public int getItemType() {
-        return IEatingType.FOOD;
+        return IEatingWrapper.FOOD;
     }
 }

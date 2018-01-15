@@ -2,7 +2,6 @@ package com.devwilly.recyclerview_java.viewholders;
 
 import com.devwilly.recyclerview_java.R;
 import com.devwilly.recyclerview_java.wrapper.FoodWrapper;
-import com.devwilly.recyclerview_java.wrapper.IEatingType;
 
 import android.view.View;
 import android.widget.TextView;
