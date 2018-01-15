@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="rv_first_item_top_margin">16dp</dimen>
+    <dimen name="rv_last_item_bottom_margin">16dp</dimen>
+    <dimen name="rv_left_margin">16dp</dimen>
+    <dimen name="rv_right_margin">16dp</dimen>
+    <dimen name="rv_top_margin">8dp</dimen>
+</resources>

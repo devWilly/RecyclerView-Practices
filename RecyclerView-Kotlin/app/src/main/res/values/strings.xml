@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">RecyclerViewKotlin</string>
+    <string name="default_recycler_view">Default RecyclerView</string>
+    <string name="unknown_item_text">載入失敗...</string>
+
+    <string name="rice_name">Rice</string>
+    <string name="rice_description">Rice, Rice, Rice</string>
+    <string name="rice_money">$1.99</string>
+
+    <string name="steak_name">Steak</string>
+    <string name="steak_description">Steak|Steak|Steak|Steak|Steak</string>
+    <string name="steak_money">$9.99</string>
+
+    <string name="risotto_name">Risotto Rice</string>
+    <string name="risotto_description">Risotto Rice</string>
+    <string name="risotto_money">$4.49</string>
+
+    <string name="pig_blood_cake_name">Pig blood cake</string>
+    <string name="pig_blood_cake_description">Pig blood cake</string>
+    <string name="pig_blood_cake_money">$1.19</string>
+
+    <string name="oyster_omelet_name">Oyster Omelet</string>
+    <string name="oyster_omelet_description">Oyster Omelet</string>
+    <string name="oyster_omelet_money">$3.39</string>
+
+    <string name="chicken_fillet_name">Chicken Fillet</string>
+    <string name="chicken_fillet_description">Chicken Fillet</string>
+    <string name="chicken_fillet_money">$5.99</string>
+
+    <string name="apple_name">Apple</string>
+    <string name="apple_description">Apple,Apple,Apple,Apple,Apple</string>
+    <string name="apple_money">$1.99</string>
+
+    <string name="banana_name">Banana</string>
+    <string name="banana_description">Banana|Banana|Banana|Banana|Banana</string>
+    <string name="banana_money">$9.99</string>
+
+    <string name="water_melon_name">Water Melon</string>
+    <string name="water_melon_description">Water Melon is water melon</string>
+    <string name="water_melon_money">$19.99</string>
+
+    <string name="avocado_name">Avocado</string>
+    <string name="avocado_description">Avocado Avocado Avocado Avocado</string>
+    <string name="avocado_money">$3.99</string>
+
+    <string name="cherry_name">Cherry</string>
+    <string name="cherry_description">Cherry</string>
+    <string name="cherry_money">$4.19</string>
+
+    <string name="coconut_name">Coconut</string>
+    <string name="coconut_description">Coconut|coconut|coconut|coconut|coconut</string>
+    <string name="coconut_money">$4.19</string>
 </resources>
