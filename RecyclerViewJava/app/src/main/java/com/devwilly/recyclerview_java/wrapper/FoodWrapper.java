@@ -11,13 +11,14 @@ public class FoodWrapper implements IEatingType {
     }
 
     private String mName;
+    private String mDescription;
     private String mPrice;
     private FoodCookingMethod mCookingMethod;
 
-    public FoodWrapper(String name, String price, FoodCookingMethod cookingMethod) {
+    public FoodWrapper(String name, String description, String price) {
         this.mName = name;
+        this.mDescription = description;
         this.mPrice = price;
-        this.mCookingMethod = cookingMethod;
     }
 
     public FoodCookingMethod getCookingMethod() {
@@ -27,6 +28,11 @@ public class FoodWrapper implements IEatingType {
     @Override
     public String getName() {
         return mName;
+    }
+
+    @Override
+    public String getDescription() {
+        return mDescription;
     }
 
     @Override

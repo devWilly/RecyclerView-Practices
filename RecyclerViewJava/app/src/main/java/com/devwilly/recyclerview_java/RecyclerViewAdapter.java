@@ -11,12 +11,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 
 /**
  * Created by Willy on 15/01/2018.
  */
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
+
+    private ArrayList<IEatingType> mItemList = new ArrayList<>();
+
+    public RecyclerViewAdapter(ArrayList<IEatingType> itemList) {
+        this.mItemList = itemList;
+    }
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,7 +36,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                 view = inflater.inflate(R.layout.fruit_item_view, parent, false);
                 return new FruitViewHolder(view);
             case IEatingType.FOOD:
-                view = inflater.inflate(R.layout.fruit_item_view, parent, false);
+                view = inflater.inflate(R.layout.food_item_view, parent, false);
                 return new FoodViewHolder(view);
             default:
                 view = inflater.inflate(R.layout.unknown_item_view, parent, false);
@@ -38,11 +46,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
+        holder.bindView(mItemList.get(position));
+    }
 
+    @Override
+    public int getItemViewType(int position) {
+        return mItemList.get(position).getItemType();
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mItemList.size();
     }
 }

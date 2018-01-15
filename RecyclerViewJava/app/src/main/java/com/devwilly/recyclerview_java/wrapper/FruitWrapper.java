@@ -8,15 +8,22 @@ public class FruitWrapper implements IEatingType {
 
     private String mName;
     private String mPrice;
+    private String mDescription;
 
-    public FruitWrapper(String name, String price) {
+    public FruitWrapper(String name, String description, String price) {
         this.mName = name;
+        this.mDescription = description;
         this.mPrice = price;
     }
 
     @Override
     public String getName() {
         return mName;
+    }
+
+    @Override
+    public String getDescription() {
+        return mDescription;
     }
 
     @Override

@@ -10,6 +10,8 @@ public interface IEatingType {
 
     String getName();
 
+    String getDescription();
+
     String getPrice();
 
     int getItemType();
