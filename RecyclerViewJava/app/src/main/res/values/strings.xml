@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecyclerView-Java</string>
+    <string name="default_recycler_view">Default RecyclerView</string>
 </resources>
