@@ -29,6 +29,7 @@ public class DefaultRecyclerViewActivity extends AppCompatActivity {
 
         RecyclerView rv = findViewById(R.id.default_recycler_view);
         rv.setLayoutManager(new LinearLayoutManager(this));
+        rv.addItemDecoration(new LayoutItemDecoration(this));
         rv.setAdapter(new RecyclerViewAdapter(list));
     }
 }
