@@ -4,11 +4,12 @@ import android.view.View
 import android.widget.TextView
 import com.devwilly.recyclerviewkotlin.R
 import com.devwilly.recyclerviewkotlin.wrapper.FruitWrapper
+import com.devwilly.recyclerviewkotlin.wrapper.IEatingWrapper
 
 /**
  * Created by Willy on 15/01/2018.
  */
-class FruitViewHolder(itemView: View) : BaseViewHolder<FruitWrapper>(itemView) {
+class FruitViewHolder(itemView: View) : BaseViewHolder<IEatingWrapper>(itemView) {
 
     private val mFruitName: TextView
     private val mFruitDescription: TextView
@@ -21,7 +22,7 @@ class FruitViewHolder(itemView: View) : BaseViewHolder<FruitWrapper>(itemView) {
 
     }
 
-    override fun bindView(t: FruitWrapper) {
+    override fun bindView(t: IEatingWrapper) {
         mFruitName.text = t.getName()
         mFruitDescription.text = t.getDescription()
         mFruitPrice.text = t.getPrice()

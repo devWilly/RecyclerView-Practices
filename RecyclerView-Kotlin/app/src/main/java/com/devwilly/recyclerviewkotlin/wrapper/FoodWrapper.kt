@@ -3,27 +3,21 @@ package com.devwilly.recyclerviewkotlin.wrapper
 /**
  * Created by Willy on 15/01/2018.
  */
-class FoodWrapper : IEatingWrapper {
+class FoodWrapper(
+        private val name: String,
+        private val description: String,
+        private val price: String) : IEatingWrapper {
 
-    private lateinit var mName: String
-    private lateinit var mDescription: String
-    private lateinit var mPrice: String
-
-    fun FoodWrapper(name: String, description: String, price: String) {
-        this.mName = name
-        this.mDescription = description
-        this.mPrice = price
-    }
     override fun getName(): String {
-        return mName
+        return name
     }
 
     override fun getDescription(): String {
-        return mDescription
+        return description
     }
 
     override fun getPrice(): String {
-        return mPrice
+        return price
     }
 
     override fun getItemType(): Int {
