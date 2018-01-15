@@ -4,7 +4,7 @@ import com.devwilly.recyclerview_java.viewholders.BaseViewHolder;
 import com.devwilly.recyclerview_java.viewholders.FoodViewHolder;
 import com.devwilly.recyclerview_java.viewholders.FruitViewHolder;
 import com.devwilly.recyclerview_java.viewholders.UnknownViewHolder;
-import com.devwilly.recyclerview_java.wrapper.IEattingType;
+import com.devwilly.recyclerview_java.wrapper.IEatingType;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,10 +24,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
         switch (viewType) {
-            case IEattingType.FRUIT:
+            case IEatingType.FRUIT:
                 view = inflater.inflate(R.layout.fruit_item_view, parent, false);
                 return new FruitViewHolder(view);
-            case IEattingType.FOOD:
+            case IEatingType.FOOD:
                 view = inflater.inflate(R.layout.fruit_item_view, parent, false);
                 return new FoodViewHolder(view);
             default:
@@ -38,7 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
-    
+
     }
 
     @Override
