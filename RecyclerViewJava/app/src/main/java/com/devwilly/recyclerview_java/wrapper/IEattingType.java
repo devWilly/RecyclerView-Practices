@@ -5,6 +5,8 @@ package com.devwilly.recyclerview_java.wrapper;
  */
 
 public interface IEattingType {
+    int FRUIT = 0;
+    int FOOD = 1;
 
     String getName();
 

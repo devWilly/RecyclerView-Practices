@@ -36,6 +36,6 @@ public class FoodWrapper implements IEattingType {
 
     @Override
     public int getItemType() {
-        return 0;
+        return IEattingType.FOOD;
     }
 }
