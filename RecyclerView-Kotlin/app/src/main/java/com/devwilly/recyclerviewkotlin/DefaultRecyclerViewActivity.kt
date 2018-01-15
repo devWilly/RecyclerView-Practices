@@ -22,6 +22,7 @@ class DefaultRecyclerViewActivity : AppCompatActivity() {
 
         val rv: RecyclerView = findViewById(R.id.default_recycler_view)
         rv.layoutManager = LinearLayoutManager(this)
+        rv.addItemDecoration(LayoutItemDecoration(this))
         rv.adapter = RecyclerViewAdapter(dataList)
     }
 }
