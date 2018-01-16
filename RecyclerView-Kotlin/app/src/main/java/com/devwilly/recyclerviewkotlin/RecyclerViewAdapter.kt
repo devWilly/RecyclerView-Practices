@@ -15,10 +15,19 @@ import com.devwilly.recyclerviewkotlin.wrapper.IEatingWrapper
  */
 class RecyclerViewAdapter(itemList: ArrayList<IEatingWrapper>) : RecyclerView.Adapter<BaseViewHolder<*>>() {
 
+    interface OnItemClickListener {
+        fun onFoodItemClick(itemName: String)
+    }
+
     private var mItemList = ArrayList<IEatingWrapper>()
+    private var mOnItemClickListener: OnItemClickListener? = null
 
     init {
         mItemList = itemList
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.mOnItemClickListener = listener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): BaseViewHolder<*> {
@@ -32,7 +41,7 @@ class RecyclerViewAdapter(itemList: ArrayList<IEatingWrapper>) : RecyclerView.Ad
             }
             IEatingWrapper.FOOD -> {
                 view = inflater.inflate(R.layout.food_item_view, parent, false)
-                FoodViewHolder(view)
+                FoodViewHolder(view, mOnItemClickListener)
             }
             else -> {
                 view = inflater.inflate(R.layout.unknown_item_view, parent, false)

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.widget.Toast
 import com.devwilly.recyclerviewkotlin.wrapper.IEatingWrapper
 
 /**
@@ -21,8 +22,17 @@ class DefaultRecyclerViewActivity : AppCompatActivity() {
 
 
         val rv: RecyclerView = findViewById(R.id.default_recycler_view)
+        val adapter = RecyclerViewAdapter(dataList)
         rv.layoutManager = LinearLayoutManager(this)
         rv.addItemDecoration(LayoutItemDecoration(this))
-        rv.adapter = RecyclerViewAdapter(dataList)
+        rv.adapter = adapter
+
+        adapter.setOnItemClickListener(object : RecyclerViewAdapter.OnItemClickListener {
+            override fun onFoodItemClick(itemName: String) {
+                val toastInfo = String.format(getString(R.string.rv_click_item_toast_information), itemName)
+                Toast.makeText(applicationContext, toastInfo, Toast.LENGTH_SHORT).show()
+            }
+
+        })
     }
 }
