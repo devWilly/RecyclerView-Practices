@@ -2,6 +2,7 @@
     <string name="app_name">RecyclerView-Java</string>
     <string name="default_recycler_view">Default RecyclerView</string>
     <string name="unknown_item_text">載入失敗...</string>
+    <string name="rv_click_item_toast_information">您點擊的是「%s」</string>
 
     <string name="rice_name">Rice</string>
     <string name="rice_description">Rice, Rice, Rice</string>

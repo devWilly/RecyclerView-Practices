@@ -20,10 +20,19 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
 
+    public interface OnItemClickListener {
+        void onFoodItemClick(String itemName);
+    }
+
     private ArrayList<IEatingWrapper> mItemList = new ArrayList<>();
+    private OnItemClickListener mOnItemClickListener;
 
     public RecyclerViewAdapter(ArrayList<IEatingWrapper> itemList) {
         this.mItemList = itemList;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.mOnItemClickListener = listener;
     }
 
     @Override
@@ -37,7 +46,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder> {
                 return new FruitViewHolder(view);
             case IEatingWrapper.FOOD:
                 view = inflater.inflate(R.layout.food_item_view, parent, false);
-                return new FoodViewHolder(view);
+                return new FoodViewHolder(view, mOnItemClickListener);
             default:
                 view = inflater.inflate(R.layout.unknown_item_view, parent, false);
                 return new UnknownViewHolder(view);
